@@ -630,11 +630,11 @@ FormBorder.propTypes = {
 export default class FormTitle extends Component {
     render() {
         return (
-            <fieldset
+            <legend
                 align={this.props.position}
             >
                 {this.props.text}
-            </fieldset>
+            </legend>
         );
     }
 }
