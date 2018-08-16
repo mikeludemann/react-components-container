@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class YoutubeVideo extends Component {
-
-    constructor(props) {
-
-        super(props);
-
-    }
-
     render() {
         return (
             <iframe 
@@ -33,13 +26,6 @@ YoutubeVideo.propTypes = {
 // ------------------------------------------------------------------------------------
 
 export default class YoutubeVideoList extends Component {
-
-    constructor(props) {
-
-        super(props);
-
-    }
-
     render() {
         return (
             <iframe 

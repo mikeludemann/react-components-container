@@ -241,7 +241,7 @@ export default class Quote extends Component {
             <q
                 cite={this.props.url}
             >
-                {this.props.text}
+                {this.props.children}
             </q>
         );
     }
@@ -249,7 +249,7 @@ export default class Quote extends Component {
 
 Quote.propTypes = {
     url: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -260,7 +260,7 @@ export default class Blockquote extends Component {
             <blockqoute
                 cite={this.props.url}
             >
-                {this.props.text}
+                {this.props.children}
             </blockqoute>
         );
     }
@@ -268,7 +268,7 @@ export default class Blockquote extends Component {
 
 Code.propTypes = {
     url: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -279,7 +279,7 @@ export default class Abbreviation extends Component {
             <abbr
                 title={this.props.title}
             >
-                {this.props.text}
+                {this.props.children}
             </abbr>
         );
     }
@@ -287,7 +287,7 @@ export default class Abbreviation extends Component {
 
 Abbreviation.propTypes = {
     title: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -379,14 +379,14 @@ export default class Article extends Component {
     render() {
         return (
             <article>
-                {this.props.text}
+                {this.props.children}
             </article>
         );
     }
 }
 
 Article.propTypes = {
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -395,14 +395,14 @@ export default class Aside extends Component {
     render() {
         return (
             <aside>
-                {this.props.text}
+                {this.props.children}
             </aside>
         );
     }
 }
 
 Aside.propTypes = {
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -423,7 +423,7 @@ export default class Applet extends Component {
                 width={this.props.width}
                 name={this.props.name}
             >
-                {this.props.text}
+                {this.props.children}
             </applet>
         );
     }
@@ -441,7 +441,7 @@ Applet.propTypes = {
     height: PropTypes.string,
     width: PropTypes.string,
     name: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -466,14 +466,14 @@ export default class Center extends Component {
     render() {
         return (
             <center>
-                {this.props.text}
+                {this.props.children}
             </center>
         );
     }
 }
 
 Center.propTypes = {
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -484,7 +484,7 @@ export default class Data extends Component {
             <data
                 value={this.props.value}
             >
-                {this.props.text}
+                {this.props.children}
             </data>
         );
     }
@@ -492,7 +492,7 @@ export default class Data extends Component {
 
 Data.propTypes = {
     value: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -551,7 +551,7 @@ export default class Details extends Component {
             <details
                 open={this.props.isOpen}
             >
-                {this.props.text}
+                {this.props.children}
             </details>
         );
     }
@@ -559,7 +559,7 @@ export default class Details extends Component {
 
 DescriptionDescribe.propTypes = {
     isOpen: PropTypes.bool,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -571,7 +571,7 @@ export default class DefininingInstance extends Component {
                 id={this.props.id}
                 title={this.props.title}
             >
-                {this.props.text}
+                {this.props.children}
             </dfn>
         );
     }
@@ -580,7 +580,7 @@ export default class DefininingInstance extends Component {
 DescriptionDescribe.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -591,7 +591,7 @@ export default class Dialog extends Component {
             <dialog
                 compact={this.props.compact}
             >
-                {this.props.text}
+                {this.props.children}
             </dialog>
         );
     }
@@ -599,7 +599,7 @@ export default class Dialog extends Component {
 
 Dialog.propTypes = {
     compact: PropTypes.bool,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -612,7 +612,7 @@ export default class FormBorder extends Component {
                 form={this.props.formName}
                 name={this.props.name}
             >
-                {this.props.text}
+                {this.props.children}
             </fieldset>
         );
     }
@@ -622,7 +622,7 @@ FormBorder.propTypes = {
     disabled: PropTypes.bool,
     formName: PropTypes.string,
     name: PropTypes.string,
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -633,7 +633,7 @@ export default class FormTitle extends Component {
             <legend
                 align={this.props.position}
             >
-                {this.props.text}
+                {this.props.children}
             </legend>
         );
     }
@@ -641,7 +641,7 @@ export default class FormTitle extends Component {
 
 FormTitle.propTypes = {
     position: PropTypes.oneOf(["left","top","bottom","right"]),
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -650,14 +650,14 @@ export default class Figure extends Component {
     render() {
         return (
             <figure>
-                {this.props.text}
+                {this.props.children}
             </figure>
         );
     }
 }
 
 Figure.propTypes = {
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -666,14 +666,14 @@ export default class FigCaption extends Component {
     render() {
         return (
             <figcaption>
-                {this.props.text}
+                {this.props.children}
             </figcaption>
         );
     }
 }
 
 FigCaption.propTypes = {
-    text: PropTypes.element
+    children: PropTypes.element
 }
 
 // -----------------------------------------
@@ -715,7 +715,7 @@ export default class FrameSet extends Component {
                 rows={this.props.rows}
                 cols={this.props.cols}
             >
-                {this.props.text}
+                {this.props.children}
             </frameset>
         );
     }
@@ -723,7 +723,8 @@ export default class FrameSet extends Component {
 
 FrameSet.propTypes = {
     rows: PropTypes.string,
-    cols: PropTypes.string
+    cols: PropTypes.string,
+    children: PropTypes.element
 }
 
 // -----------------------------------------

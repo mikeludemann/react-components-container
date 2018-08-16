@@ -3,11 +3,6 @@ import PropTypes from 'prop-types';
 
 export default class GooglePlus extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
     componentDidMount() {
 
         var js = document.createElement("script");

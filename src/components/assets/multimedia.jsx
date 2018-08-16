@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class Video extends Component {
+export default class Video extends Component {
     render() {
 
         const title = this.props.title ? this.props.title : this.props.src;
@@ -60,7 +60,7 @@ Video.propTypes = {
 
 // -----------------------------------------
 
-export class Audio extends Component {
+export default class Audio extends Component {
     render() {
 
         const title = this.props.title ? this.props.title : this.props.src;
@@ -108,7 +108,7 @@ Audio.propTypes = {
 
 // -----------------------------------------
 
-export class Embed extends Component {
+export default class Embed extends Component {
     render() {
         return (
             <div className={this.props.className}>
@@ -126,7 +126,7 @@ Embed.propTypes = {
 
 // -----------------------------------------
 
-export class Object extends Component {
+export default class Object extends Component {
     render() {
         return (
             <div className={this.props.className}>

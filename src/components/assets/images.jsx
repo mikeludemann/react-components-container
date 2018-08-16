@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class Image extends Component {
+export default class Image extends Component {
     render() {
         return (
             <div className={this.props.containerClass}>
@@ -27,7 +27,7 @@ Image.propTypes = {
 
 // -----------------------------------------
 
-export class MapImage extends Component {
+export default class MapImage extends Component {
     render() {
         return (
             <div className={this.props.containerClass}>
@@ -61,7 +61,7 @@ MapImage.propTypes = {
 
 // -----------------------------------------
 
-export class Picture extends Component {
+export default class Picture extends Component {
     render() {
         return (
             <div className={this.props.containerClass}>

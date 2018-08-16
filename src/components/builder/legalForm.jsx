@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class LegalForm extends Component {
+export default class LegalForm extends Component {
     render() {
         return (
             <div className="legalForm--container">

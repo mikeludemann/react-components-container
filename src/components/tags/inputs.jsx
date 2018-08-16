@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class InputWithHeadline extends Component {
+export default class InputWithHeadline extends Component {
     render() {
         return (
             <div className={this.props.mainClass}>
@@ -45,7 +45,7 @@ InputWithHeadline.propTypes = {
 
 // -----------------------------------------
 
-export class Input extends Component {
+export default class Input extends Component {
     render() {
         return (
             <div className="form--element">
@@ -81,7 +81,7 @@ Input.propTypes = {
 
 // -----------------------------------------
 
-export class InputWithDataList extends Component {
+export default class InputWithDataList extends Component {
     render() {
         return (
             <div className="form--element">
@@ -129,7 +129,7 @@ InputWithDataList.propTypes = {
 
 // -----------------------------------------
 
-export class Textarea extends Component {
+export default class Textarea extends Component {
     render() {
         return (
             <div className="form--element">
