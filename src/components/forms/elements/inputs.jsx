@@ -45,7 +45,7 @@ InputWithHeadline.propTypes = {
 
 // -----------------------------------------
 
-export default class Input extends Component {
+export default class Inputs extends Component {
     render() {
         return (
             <div className="form--element">
@@ -67,7 +67,7 @@ export default class Input extends Component {
     }
 }
 
-Input.propTypes = {
+Inputs.propTypes = {
     fields: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
@@ -77,6 +77,36 @@ Input.propTypes = {
             placeholder: PropTypes.string
         }).isRequired
     ).isRequired
+}
+
+// -----------------------------------------
+
+export default class Input extends Component {
+    render() {
+        return (
+            <div className="form--element">
+                <div className="input--container">
+                    <div className="input--container--field">
+                        <input
+                            type={this.props.type}
+                            id={this.props.id}
+                            name={this.props.name}
+                            value={this.props.value}
+                            placeholder={this.props.placeholder}
+                        />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+Input.propTypes = {
+    id: PropTypes.string,
+    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    placeholder: PropTypes.string
 }
 
 // -----------------------------------------
@@ -100,9 +130,9 @@ export default class InputWithDataList extends Component {
                     </div>
                 })}
                 <datalist id={this.props.datalistID}>
-                {this.props.datalists.map((field) => {
-                    return <option value={field.value} />
-                })}
+                    {this.props.datalists.map((field) => {
+                        return <option value={field.value} />
+                    })}
                 </datalist>
             </div>
         );
