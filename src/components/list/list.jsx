@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const listStyle = {
-    listStyleType: 'none',
-    paddingLeft: '0px'
-};
-
 export default class SortingList extends Component {
     render() {
+        const listStyle = {
+            listStyleType: 'none',
+            paddingLeft: '0px'
+        };
         return (
             <ol style={listStyle}>
                 {this.props.items.map((item) => {
@@ -35,6 +34,10 @@ SortingList.propTypes = {
 
 export default class UnsortingList extends Component {
     render() {
+        const listStyle = {
+            listStyleType: 'none',
+            paddingLeft: '0px'
+        };
         return (
             <ul style={listStyle}>
                 {this.props.items.map((item) => {
@@ -62,6 +65,10 @@ UnsortingList.propTypes = {
 
 export default class DirectionList extends Component {
     render() {
+        const listStyle = {
+            listStyleType: 'none',
+            paddingLeft: '0px'
+        };
         return (
             <dir style={listStyle}>
                 {this.props.items.map((item) => {

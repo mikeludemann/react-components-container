@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-var btn = {
-    position: "fixed",
-    bottom: "2%",
-    right: "5%",
-    padding: "15px",
-    backgroundColor: "#888"
-}
-
-var topArrow = {
-    padding: "5px",
-    borderTop: "4px solid #fff",
-    borderLeft: "4px solid #fff",
-    transform: "rotate(45deg) translate(15%, 15%)",
-}
-
 export default class Button extends Component {
     constructor(props) {
         super(props)
@@ -65,12 +50,30 @@ export default class Button extends Component {
                 document.getElementById("top").style.display = "none";
 
             }
-            
+
         }
 
     }
 
     render() {
+
+        var btn = {
+            position: "fixed",
+            bottom: "2%",
+            right: "5%",
+            padding: "15px",
+            backgroundColor: "#888",
+            transition: "all 1s ease-in-out"
+        }
+
+        var topArrow = {
+            padding: "5px",
+            borderTop: "4px solid #fff",
+            borderLeft: "4px solid #fff",
+            transform: "rotate(45deg) translate(15%, 15%)",
+            transition: "all 1s ease-in-out"
+        }
+
         return (
             <div id="top" style={btn}>
                 <div style={topArrow}></div>
