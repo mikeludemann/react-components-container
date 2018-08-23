@@ -2,27 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Modal extends Component {
-
-    /*
-    componentDidMount(){
-    
-    
-        var dw = document || window;
-        
-        dw.onclick = function (event) {
-    
-        var modal = document.getElementById("simpleModal");
-    
-        if (event.target == modal) {
-    
-            modal.style.display = "none";
-            this.props.show = this.props.show;
-    
-        }
-    
-    }
-    */
-
     render() {
 
         if (!this.props.show) {
@@ -46,49 +25,49 @@ export default class Modal extends Component {
         const small = {
             backgroundColor: '#fff',
             borderRadius: 5,
-            minWidth: "25%",
-            minHeight: "25%",
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            transition: "all 1s ease-in-out"
+            transition: "all 1s ease-in-out",
+            minWidth: "25%",
+            minHeight: "25%"
         };
 
         const medium = {
             backgroundColor: '#fff',
             borderRadius: 5,
-            minWidth: "50%",
-            minHeight: "50%",
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            transition: "all 1s ease-in-out"
+            transition: "all 1s ease-in-out",
+            minWidth: "50%",
+            minHeight: "50%"
         };
 
         const large = {
             backgroundColor: '#fff',
             borderRadius: 5,
-            minWidth: "75%",
-            minHeight: "75%",
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            transition: "all 1s ease-in-out"
+            transition: "all 1s ease-in-out",
+            minWidth: "75%",
+            minHeight: "75%"
         };
 
         const full = {
             backgroundColor: '#fff',
-            borderRadius: 0,
-            minWidth: "100%",
-            minHeight: "100%",
+            borderRadius: 5,
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
-            transition: "all 1s ease-in-out"
+            transition: "all 1s ease-in-out",
+            minWidth: "100%",
+            minHeight: "100%"
         };
 
         const headerStyle = {
