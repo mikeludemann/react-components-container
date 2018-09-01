@@ -688,7 +688,7 @@ export default class Frame extends Component {
                 marginHeight={this.props.height}
                 marginWidth={this.props.width}
                 name={this.props.name}
-                noresize={this.props.border}
+                noresize={this.props.noresize}
                 scrolling={this.props.scrollFormat}
             />
         );
