@@ -557,7 +557,7 @@ export default class Details extends Component {
     }
 }
 
-DescriptionDescribe.propTypes = {
+Details.propTypes = {
     isOpen: PropTypes.bool,
     children: PropTypes.element
 }
@@ -577,7 +577,7 @@ export default class DefininingInstance extends Component {
     }
 }
 
-DescriptionDescribe.propTypes = {
+DefininingInstance.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
     children: PropTypes.element
