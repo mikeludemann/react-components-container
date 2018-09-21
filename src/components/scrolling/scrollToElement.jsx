@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class scrollToTop extends Component {
+export default class scrollToElement extends Component {
 
     componentDidMount() {
 
-        var elem = document.body || document.documentElement;
+        var elem = document.querySelector(this.props.element);
+        var speed = this.props.timer;
 
         function runScroll() {
-            scrollTo(elem, 0, 600);
+            scrollTo(document.body, elem.offsetTop, speed);
         }
 
         var scrollme;
@@ -78,4 +79,9 @@ export default class scrollToTop extends Component {
             </div>
         )
     }
+}
+
+scrollToElement.propTypes = {
+    element: PropTypes.string.isRequired,
+    timer: PropTypes.string.isRequired
 }
