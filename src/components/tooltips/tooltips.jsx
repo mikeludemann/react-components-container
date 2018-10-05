@@ -2,7 +2,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-export default class TooltipsTop extends Component {
+export default class Tooltip extends Component {
+    render() {
+        return (
+            <div class="tooltip">
+                <div class="tooltip-text">
+                    {this.props.defaultText}
+                </div>
+                <div class={"tooltip-text-" + this.props.position}>
+                    {this.props.tooltipsText}
+                </div>
+            </div>
+        );
+    }
+}
+
+Tooltip.propTypes = {
+    defaultText: PropTypes.string.isRequired,
+    tooltipsText: PropTypes.string.isRequired,
+    position: PropTypes.oneOf(["top","left","right","bottom"]).isRequired
+}
+
+// -----------------------------------------
+
+export default class TooltipTop extends Component {
     render() {
         return (
             <div class="tooltip">
@@ -17,14 +40,14 @@ export default class TooltipsTop extends Component {
     }
 }
 
-TooltipsTop.propTypes = {
+TooltipTop.propTypes = {
     defaultText: PropTypes.string.isRequired,
     tooltipsText: PropTypes.string.isRequired
 }
 
 // -----------------------------------------
 
-export default class TooltipsBottom extends Component {
+export default class TooltipBottom extends Component {
     render() {
         return (
             <div class="tooltip">
@@ -39,14 +62,14 @@ export default class TooltipsBottom extends Component {
     }
 }
 
-TooltipsBottom.propTypes = {
+TooltipBottom.propTypes = {
     defaultText: PropTypes.string.isRequired,
     tooltipsText: PropTypes.string.isRequired
 }
 
 // -----------------------------------------
 
-export default class TooltipsRight extends Component {
+export default class TooltipRight extends Component {
     render() {
         return (
             <div class="tooltip">
@@ -61,14 +84,14 @@ export default class TooltipsRight extends Component {
     }
 }
 
-TooltipsRight.propTypes = {
+TooltipRight.propTypes = {
     defaultText: PropTypes.string.isRequired,
     tooltipsText: PropTypes.string.isRequired
 }
 
 // -----------------------------------------
 
-export default class TooltipsLeft extends Component {
+export default class TooltipLeft extends Component {
     render() {
         return (
             <div class="tooltip">
@@ -83,7 +106,7 @@ export default class TooltipsLeft extends Component {
     }
 }
 
-TooltipsLeft.propTypes = {
+TooltipLeft.propTypes = {
     defaultText: PropTypes.string.isRequired,
     tooltipsText: PropTypes.string.isRequired
 }
