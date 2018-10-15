@@ -76,10 +76,6 @@ export default class ImageOverlay extends Component {
 }
 
 ImageOverlay.propTypes = {
-    firstname: PropTypes.string.isRequired,
-    secondname: PropTypes.string,
-    lastname: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
     class: PropTypes.string,
     color: PropTypes.string.isRequired,
     bgcolor: PropTypes.string.isRequired,

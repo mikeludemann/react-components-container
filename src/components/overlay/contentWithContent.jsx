@@ -83,6 +83,8 @@ ContentOverlay.propTypes = {
     overcolor: PropTypes.string.isRequired,
     overbgcolor: PropTypes.string.isRequired,
     borderradius: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    maintext: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
     textsize: PropTypes.string
 }

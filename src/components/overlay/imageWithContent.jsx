@@ -93,4 +93,5 @@ ContentOverlay.propTypes = {
     textsize: PropTypes.string,
     image: PropTypes.string.isRequired,
     alttext: PropTypes.string,
+    text: PropTypes.string.isRequired
 }
