@@ -257,16 +257,16 @@ Quote.propTypes = {
 export default class Blockquote extends Component {
     render() {
         return (
-            <blockqoute
+            <blockquote
                 cite={this.props.url}
             >
                 {this.props.children}
-            </blockqoute>
+            </blockquote>
         );
     }
 }
 
-Code.propTypes = {
+Blockquote.propTypes = {
     url: PropTypes.string,
     children: PropTypes.element
 }

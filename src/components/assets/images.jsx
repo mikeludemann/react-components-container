@@ -9,31 +9,31 @@ export default class Image extends Component {
             if (this.props.filter == "blur") {
                 image[i].style.filter = "blur(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "brightness") {
+            else if (this.props.filter == "brightness") {
                 image[i].style.filter = "brightness(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "contrast") {
+            else if (this.props.filter == "contrast") {
                 image[i].style.filter = "contrast(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "drop-shadow") {
+            else if (this.props.filter == "drop-shadow") {
                 image[i].style.filter = "drop-shadow(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "grayscale") {
+            else if (this.props.filter == "grayscale") {
                 image[i].style.filter = "grayscale(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "hue-rotate") {
+            else if (this.props.filter == "hue-rotate") {
                 image[i].style.filter = "hue-rotate(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "invert") {
+            else if (this.props.filter == "invert") {
                 image[i].style.filter = "invert(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "opacity") {
+            else if (this.props.filter == "opacity") {
                 image[i].style.filter = "opacity(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "saturate") {
+            else if (this.props.filter == "saturate") {
                 image[i].style.filter = "saturate(" + this.props.filterDimension + ")";
             }
-            if (this.props.filter == "sepia") {
+            else if (this.props.filter == "sepia") {
                 image[i].style.filter = "sepia(" + this.props.filterDimension + ")";
             }
             else {
