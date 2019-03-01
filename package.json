@@ -21,6 +21,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "react-cookie": "^3.0.8",
     "react-cookie-banner": "^4.0.0",
     "styled-components": "^4.1.3"
   }
