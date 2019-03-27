@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './../assets/logo.svg';
 import './../styles/App.css';
+import Navi from './router-components/navi';
+import MainRouter from './router-components/mainRouter';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +16,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <div id="navi">
+          <Navi/>
+          <MainRouter/>
+        </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
