@@ -7,13 +7,13 @@ class MainRouter extends Component {
 	render() {
 		return (
 			<div>
-                <Switch>
-                    <Route exact path='/' component={Home}/>
-                    <Route path='/person' component={Person}/>
-                </Switch>
-            </div>
+				<Switch>
+					<Route exact path='/' component={Home}/>
+					<Route path='/person' component={Person}/>
+				</Switch>
+			</div>
 		)
-    }
+	}
 }
 
 export default MainRouter

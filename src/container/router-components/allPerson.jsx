@@ -6,18 +6,18 @@ class AllPerson extends Component {
 	render() {
 		return (
 			<div>
-                <ul>
-                    {
-                        PersonAPI.all().map(p => (
-                            <li key={p.id}>
-                                <Link to={`/person/${p.id}`}>{p.name}</Link>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
+				<ul>
+					{
+						PersonAPI.all().map(p => (
+							<li key={p.id}>
+								<Link to={`/person/${p.id}`}>{p.name}</Link>
+							</li>
+						))
+					}
+				</ul>
+			</div>
 		)
-    }
+	}
 }
 
 export default AllPerson

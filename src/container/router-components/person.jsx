@@ -7,11 +7,11 @@ class Person extends Component {
 	render() {
 		return (
 			<Switch>
-                <Route exact path='/person' component={AllPerson}/>
-                <Route path='/person/:id' component={DetailPerson}/>
-            </Switch>
+				<Route exact path='/person' component={AllPerson}/>
+				<Route path='/person/:id' component={DetailPerson}/>
+			</Switch>
 		)
-    }
+	}
 }
 
 export default Person
