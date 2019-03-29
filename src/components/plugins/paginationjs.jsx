@@ -19,7 +19,7 @@ export default class Pagination extends Component {
 
 		var g = document.createElement('script');
 		g.type = 'text/javascript';
-		g.innerHTML = '$(function(){(function(name){var container=$("#pagination-"+name);var sources=function(){var result=[];var dataElement=' + this.props.elements + ';if(Array.isArray(dataElement)){for(var i=0;i<=dataElement.length-1;i++){result.push(dataElement[i])}}if(dataElement instanceof Object){Object.keys(dataElement).forEach(function(key){result.push(dataElement[key])})}return result}();var options={dataSource:sources,callback:function(response,pagination){var dataHtml="<ul>";$.each(response,function(index,item){dataHtml+="<li>"+item+"</li>"});dataHtml+="</ul>";container.prev().html(dataHtml)}};container.pagination(options)})("' + this.props.id + '")})';
+		g.innerHTML = '$(function(){(function(name){var container=$("#pagination-"+name);var sources=function(){var result=[];var dataElement=' + this.props.elements + ';if(Array.isArray(dataElement)){for(var i=0;i<=dataElement.length-1;i++){result.push(dataElement[i])}}else if(dataElement instanceof Object){Object.keys(dataElement).forEach(function(key){result.push(dataElement[key])})}return result}();var options={dataSource:sources,' + this.props.options + ',callback:function(response,pagination){var dataHtml="<ul>";$.each(response,function(index,item){dataHtml+="<li>"+item+"</li>"});dataHtml+="</ul>";container.prev().html(dataHtml)}};container.pagination(options)})("' + this.props.id + '")})';
 
 		document.getElementsByTagName('body')[0].appendChild(g);
 
@@ -39,7 +39,8 @@ export default class Pagination extends Component {
 
 Pagination.propTypes = {
 	id: PropTypes.string.isRequired,
-	elements: PropTypes.string.isRequired
+	elements: PropTypes.string.isRequired,
+	options: PropTypes.string.isRequired
 }
 
 /**
@@ -49,4 +50,4 @@ Pagination.propTypes = {
 	* 
 	* <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
 	* <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	*/
+*/
