@@ -16,14 +16,6 @@ export default class Carousel extends Component {
     this.setState({ hover: false })
   }
 
-  prev() {
-    slider(defaultIndex -= 1);
-  }
-
-  next() {
-    slider(defaultIndex += 1);
-  }
-
   resizeViewport(){
 
     this.setState({
@@ -44,8 +36,18 @@ export default class Carousel extends Component {
     window.addEventListener('resize', this.resizeViewport);
 
     var defaultIndex = 1;
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
 
     slider(defaultIndex);
+
+    prev.addEventListener("click", function(){
+      slider(defaultIndex -= 1);
+    });
+
+    next.addEventListener("click", function(){
+      slider(defaultIndex += 1);
+    });
 
     function slider(n) {
 
@@ -140,8 +142,8 @@ export default class Carousel extends Component {
     return (
       <div className="container--slider" style={container}>
         {this.props.children}
-        <a class="prev" style={prev} onClick={prev} onMouseOver={this.handleVisible.bind(this)} onMouseOut={this.handleNotVisible.bind(this)}>&#10094;</a>
-        <a class="next" style={next} onClick={next} onMouseOver={this.handleVisible.bind(this)} onMouseOut={this.handleNotVisible.bind(this)}>&#10095;</a>
+        <a id="prev" style={prev} onMouseOver={this.handleVisible.bind(this)} onMouseOut={this.handleNotVisible.bind(this)}>&#10094;</a>
+        <a id="next" style={next} onMouseOver={this.handleVisible.bind(this)} onMouseOut={this.handleNotVisible.bind(this)}>&#10095;</a>
       </div>
     );
   }
